@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_weather_background"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/dimen_70"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_24_sp" />
+
+                <ImageView
+                    android:id="@+id/img_weather"
+                    android:layout_width="@dimen/weather_main_imageview_width"
+                    android:layout_height="@dimen/weather_main_imageview_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:contentDescription="@string/weatherAppImage"
+                    android:outlineProvider="bounds"
+                    android:scaleType="fitXY"
+                    tools:ignore="TooDeepLayout,ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tv_weather_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_50_sp" />
+
+                <TextView
+                    android:id="@+id/tv_weather_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_25_sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_6"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_16_sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/dimen_7"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginEnd="@dimen/dimen_7"
+                    android:orientation="horizontal">
+
+                    <!-- Column 1 (Rain)-->
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/weather_report"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <ImageView
+                            android:id="@+id/weather_rain_icon"
+                            android:layout_width="@dimen/dimen_30"
+                            android:layout_height="@dimen/dimen_30"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:contentDescription="@string/weatherAppImage"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/rain"
+                            tools:ignore="TooDeepLayout" />
+
+                        <TextView
+                            android:id="@+id/tv_chanceRain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_18_sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center"
+                            android:text="@string/chance_of_rain"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_14_sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dimen_1"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_4"
+                        android:background="@color/white" />
+
+                    <!-- Column 2 (Wind)-->
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/weather_report"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_30"
+                            android:layout_height="@dimen/dimen_30"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:contentDescription="@string/weatherAppImage"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/wind"
+                            tools:ignore="TooDeepLayout" />
+
+                        <TextView
+                            android:id="@+id/tv_windSpeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_18_sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center"
+                            android:text="@string/wind_speed"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_14_sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dimen_1"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_4"
+                        android:background="@color/white" />
+
+                    <!-- Column 3 (Humidity)-->
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="@dimen/weather_report"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_30"
+                            android:layout_height="@dimen/dimen_30"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:contentDescription="@string/weatherAppImage"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/humidity"
+                            tools:ignore="TooDeepLayout" />
+
+                        <TextView
+                            android:id="@+id/tv_humidity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_18_sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center"
+                            android:text="@string/humidity"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_14_sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_10"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/today_s_forecast"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dimen_16_sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_forecast"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_10"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        tools:listitem="@layout/layout_forecast" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

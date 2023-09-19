@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">CG Task B</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="chance_of_rain">Chance of Rain</string>
+    <string name="weatherAppImage">weather</string>
+
+    <string name="general_ok">OK</string>
+    <string name="general_cancel">Cancel</string>
+    <string name="locations">"locations"</string>
+    <string name="background_location_granted">Granted Background Location Permission</string>
+    <string name="background_location_need">Background Location Permission Needed</string>
+    <string name="background_location_need_desc">This app needs the Background Location permission, please accept to use location functionality</string>
+    <string name="widget_config_permissions_consent">This App requires background location permissions to function.\n\nThe app will have access to your location even when you are not using the app. The data is not further processed or stored in any way.</string>
+    <string name="widget_config_permissions_not_granted">This App requires background location permissions to function.</string>
+    <string name="today_s_forecast">Today\'s Forecast</string>
+    <string name="your_app_is_running">"Your app is running."</string>
+    <string name="permission_need">"You need to enable location permission."</string>
+
+    <string name="weatherData">"weatherData"</string>
+    <string name="date">"date"</string>
+    <string name="temperature">"temperature"</string>
+    <string name="temperature_desc">"temperature_desc"</string>
+    <string name="temperature_pic">"temperature_pic"</string>
+    <string name="city">"city"</string>
+
+</resources>
