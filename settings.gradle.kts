@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CG Task B"
+rootProject.name = "Weather App"
 include(":app")
