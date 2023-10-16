@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.cgtaskb"
+    namespace = "com.example.weather"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.cgtaskb"
+        applicationId = "com.example.weather"
         minSdk = 21
         targetSdk = 33
         versionCode = 1
